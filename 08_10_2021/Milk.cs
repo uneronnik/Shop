@@ -4,8 +4,16 @@
     {
         class Milk : IProduct
         {
-            public int Price { get => Price; set => Price = value; }
-            public string Name { get => Name; set => Name = value; }
+            int _price;
+            string _name;
+            public Milk(int price, string name)
+            {
+                _price = price;
+                _name = name;
+            }
+
+            public int Price { get => _price; }
+            public string Name { get => _name; }
 
             public event BuyHandler Purchased;
 

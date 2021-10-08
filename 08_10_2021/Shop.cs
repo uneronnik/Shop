@@ -6,14 +6,14 @@ namespace _08_10_2021
     {
         class Shop
         {
-            List<Category> _categories;
+            List<Category> _categories = new List<Category>();
 
-            void AddCategory(Category category)
+            public void AddCategory(Category category)
             {
                 _categories.Add(category);
             }
 
-            Category TryGetCategory(string name)
+            public Category TryGetCategory(string name)
             {
                 foreach (var category in _categories)
                 {
@@ -31,6 +31,7 @@ namespace _08_10_2021
                 }
                 return stringToReturn;
             }
+
         }
     }
 }

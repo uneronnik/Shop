@@ -6,8 +6,8 @@
         interface IProduct
         {
             event BuyHandler Purchased;
-            int Price { get; set; }
-            string Name { get; set; }
+            int Price { get; }
+            string Name { get; }
             void Buy();
         }
     }

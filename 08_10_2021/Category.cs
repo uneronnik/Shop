@@ -8,7 +8,7 @@ namespace _08_10_2021
     {
         class Category
         {
-            List<IProduct> _products;
+            List<IProduct> _products = new List<IProduct>();
 
             public Category(string name)
             {
@@ -20,8 +20,8 @@ namespace _08_10_2021
                 Name = name;
                 _products = products;
             }
-
-            public string Name { get => Name; set => Name = value; }
+            string _name; 
+            public string Name { get => _name; set => _name = value; }
             public override string ToString()
             {
                 string stringToReturn = "";

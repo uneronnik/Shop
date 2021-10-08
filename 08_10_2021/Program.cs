@@ -13,10 +13,15 @@ namespace _08_10_2021
 
         static void Main(string[] args)
         {
-            
-
-
-
+            Shop shop = new Shop();
+            Category category = new Category("Milk products");
+            category.AddProduct(new Milk(1, "Бежин луг"));
+            shop.AddCategory(category);
+            WriteLine(shop);
+            Category milkCategory = shop.TryGetCategory("Milk products");
+            WriteLine(milkCategory);
+            WriteLine(milkCategory.BuyProduct(1));
+            ReadKey();
         }
     }
 }
